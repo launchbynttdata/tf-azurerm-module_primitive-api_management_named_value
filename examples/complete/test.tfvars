@@ -6,4 +6,4 @@ publisher_email = "launchdso@nttdata.com"
 virtual_network_type = "None"
 
 # uncomment when running locally without a service principal
-use_service_principal = false
+# use_service_principal = false
