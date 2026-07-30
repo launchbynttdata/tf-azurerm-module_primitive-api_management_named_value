@@ -16,6 +16,14 @@ import (
 )
 
 func TestApiManagementModule(t *testing.T, ctx types.TestContext) {
+	testApiManagementModule(t, ctx)
+}
+
+func TestComposableApiManagementModule(t *testing.T, ctx types.TestContext) {
+	testApiManagementModule(t, ctx)
+}
+
+func testApiManagementModule(t *testing.T, ctx types.TestContext) {
 	subscriptionId := os.Getenv("ARM_SUBSCRIPTION_ID")
 	if len(subscriptionId) == 0 {
 		t.Fatal("ARM_SUBSCRIPTION_ID environment variable is not set")

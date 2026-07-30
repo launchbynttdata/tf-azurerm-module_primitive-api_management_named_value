@@ -111,12 +111,6 @@ If `make check` target is successful, developer is good to commit the code to pr
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.117 |
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.117.1 |
-
 ## Modules
 
 No modules.
@@ -131,20 +125,20 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | name of the resource group where the APIM exists | `string` | `null` | no |
 | <a name="input_api_management_name"></a> [api\_management\_name](#input\_api\_management\_name) | name of the APIM in which this named value will de deployed | `string` | `null` | no |
-| <a name="input_name"></a> [name](#input\_name) | The name of the named value. | `string` | n/a | yes |
 | <a name="input_display_name"></a> [display\_name](#input\_display\_name) | The display name of the named value. | `string` | n/a | yes |
-| <a name="input_value"></a> [value](#input\_value) | The value of the named value. | `string` | `null` | no |
-| <a name="input_value_from_key_vault"></a> [value\_from\_key\_vault](#input\_value\_from\_key\_vault) | The Key Vault secret identifier to reference for the named value's value. | <pre>object({<br>    secret_id          = string<br>    identity_client_id = optional(string, null)<br>  })</pre> | `null` | no |
+| <a name="input_name"></a> [name](#input\_name) | The name of the named value. | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | name of the resource group where the APIM exists | `string` | `null` | no |
 | <a name="input_secret"></a> [secret](#input\_secret) | Specifies whether the named value is a secret. | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A set of tags to assign to the resource. | `set(string)` | `[]` | no |
+| <a name="input_value"></a> [value](#input\_value) | The value of the named value. | `string` | `null` | no |
+| <a name="input_value_from_key_vault"></a> [value\_from\_key\_vault](#input\_value\_from\_key\_vault) | The Key Vault secret identifier to reference for the named value's value. | <pre>object({<br/>    secret_id          = string<br/>    identity_client_id = optional(string, null)<br/>  })</pre> | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_name"></a> [name](#output\_name) | n/a |
 | <a name="output_id"></a> [id](#output\_id) | n/a |
+| <a name="output_name"></a> [name](#output\_name) | n/a |
 | <a name="output_secret"></a> [secret](#output\_secret) | n/a |
 <!-- END_TF_DOCS -->

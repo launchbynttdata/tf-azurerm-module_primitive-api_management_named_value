@@ -33,5 +33,5 @@ func TestApiManagementModule(t *testing.T) {
 		SetTestConfigFileName(infraTFVarFileNameDefault).
 		Build()
 
-	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestApiManagementModule)
+	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestComposableApiManagementModule)
 }
