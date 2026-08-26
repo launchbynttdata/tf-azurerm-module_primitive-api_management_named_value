@@ -43,10 +43,10 @@ func testApiManagementModule(t *testing.T, ctx types.TestContext) {
 		t.Fatalf("Error getting API Management named value client: %v", err)
 	}
 
-	resourceGroupName := terraform.Output(t, ctx.TerratestTerraformOptions(), "resource_group_name")
-	serviceName := terraform.Output(t, ctx.TerratestTerraformOptions(), "api_management_name")
-	namedValueName := terraform.Output(t, ctx.TerratestTerraformOptions(), "named_value_name")
-	secretNamedValueName := terraform.Output(t, ctx.TerratestTerraformOptions(), "secret_named_value_name")
+	resourceGroupName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "resource_group_name")
+	serviceName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "api_management_name")
+	namedValueName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "named_value_name")
+	secretNamedValueName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "secret_named_value_name")
 
 	t.Run("doesApiManagementNamedValueExist", func(t *testing.T) {
 		namedValue, err := namedValueClient.Get(context.Background(), resourceGroupName, serviceName, namedValueName, nil)
